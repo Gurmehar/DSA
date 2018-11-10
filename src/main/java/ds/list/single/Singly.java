@@ -4,7 +4,7 @@ import ds.list.node.Node;
 
 public class Singly {
 
-  public int listLength(Node headNode) {
+  public static int listLength(Node headNode) {
     int length = 0;
     Node currNode = headNode;
 
@@ -53,7 +53,7 @@ public class Singly {
     
   }
 
-  public String printList(Node headNode){
+  public static String printList(Node headNode){
     if(headNode==null){
       return "[]";
     }
@@ -104,7 +104,7 @@ public class Singly {
     int i=0,length=listLength(headNode);
     Node currNode=headNode;
     Node previousNode=null;
-    while(i<length-1){
+    while(i<position-1){
       previousNode=currNode;
       currNode=currNode.getNext();
       i++;
@@ -117,11 +117,7 @@ public class Singly {
     
     
   }
-  public static void main(String[] args) {
-    int x=3;
-    int y=2*++x;
-    System.out.println(y);
-  }
+ 
   
 
 }
