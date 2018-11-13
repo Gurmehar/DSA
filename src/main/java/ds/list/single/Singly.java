@@ -1,5 +1,6 @@
 package ds.list.single;
 
+import ds.list.node.IntNode;
 import ds.list.node.Node;
 
 public class Singly {
@@ -7,6 +8,17 @@ public class Singly {
   public static int listLength(Node headNode) {
     int length = 0;
     Node currNode = headNode;
+
+    while (currNode.getNext() != null) {
+      length++;
+      currNode = currNode.getNext();
+    }
+    return length;
+
+  }
+  public static int listLength(IntNode headNode) {
+    int length = 0;
+    IntNode currNode = headNode;
 
     while (currNode.getNext() != null) {
       length++;
@@ -65,6 +77,24 @@ public class Singly {
       currNode=currNode.getNext();
       i++;
     }
+    System.out.println(str);
+    return str;
+    
+  }
+  
+  public static String printList(IntNode headNode){
+    if(headNode==null){
+      return "[]";
+    }
+    IntNode currNode=headNode;
+    int length=listLength(headNode),i=0;
+    String str="";
+    while(currNode!=null){
+      str=str+"[ "+currNode.getData()+" ],";
+      currNode=currNode.getNext();
+      i++;
+    }
+    System.out.println(str);
     return str;
     
   }

@@ -13,10 +13,10 @@ public class FindMiddle {
     Node fastNode=head;
     Node slowNode =head;
     boolean flag=false;
-    while(fastNode!=null){
-      slowNode=slowNode.getNext();
+    while(fastNode.getNext()!=null){
+      fastNode=fastNode.getNext();
       if(!flag){
-        fastNode=fastNode.getNext().getNext();
+        slowNode=slowNode.getNext();        
         flag=true;
       }else{
         flag=false;
